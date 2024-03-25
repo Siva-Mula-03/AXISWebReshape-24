@@ -24,7 +24,7 @@ const DefaultNavbar = () => {
                 width="450px"
                 height="450px"
                 alt="Axis Logo"
-                style={{ marginLeft: "-250px " }}
+                style={{ marginLeft: "-50px " }}
               />
             </a>
             <div className="hidden md:block"></div>
