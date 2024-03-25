@@ -1,0 +1,31 @@
+/* Define keyframes for the slide animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+  
+/* Apply the slide animation to the new-image-roll-container */
+.new-image-roll-container {
+    display: flex;
+    overflow: hidden; /* Hide overflowing images */
+    background-color: aliceblue;
+}
+  
+/* Apply styles to the new image containers */
+.new-image-roll-container .new-image-container {
+    flex: 1; /* Each image container occupies equal space */
+    max-width: calc(100% / 3); /* Maximum width for each container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 1s ease-in-out; /* Transition for smooth animation */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.new-image-roll-container img {
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Apply the slide animation to the active new image container */
+.new-image-roll-container .new-image-container.active {
+    animation: slide 4s linear infinite; /* Apply the slide animation */
+}

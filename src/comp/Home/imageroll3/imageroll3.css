@@ -1,0 +1,29 @@
+/* imageroll3.css */
+
+/* Define keyframes for the slide animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+  
+/* Apply the slide animation to the roll3-container */
+.roll3-container {
+    display: flex;
+    overflow: hidden; /* Hide overflowing images */
+}
+  
+/* Apply styles to the images */
+.roll3-container .roll3-item {
+    border: 2px solid black; /* Add a solid black border */
+}
+
+.roll3-container img {
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 1s ease-in-out; /* Transition for smooth animation */
+}
+  
+/* Apply the slide animation to the active image */
+.roll3-container .roll3-item.active {
+    animation: slide 4s linear infinite; /* Apply the slide animation */
+}
